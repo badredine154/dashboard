@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import BarChart from './components/BarChart';
+import Total from './components/Total';
+import { propertyData } from './data/Data';
+import { Chart as ChartJS } from 'chart.js/auto';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [PropertyData, setpropertyData] = useState({
+    labels: propertyData.map((data) => data.month),
+    datasets: [{
+      label: "properties sold",
+      data: propertyData.map((data) => data.sales),
+      backgroundColor: "red",
+      borderColor:"black",
+      borderWidth:"1",
+  },
+  ]
+})
+return (
+  <div className="App">
+
+    <Total />
+
+    <div style={{ width: 800 }}>
+      <BarChart chartData={PropertyData} />
     </div>
-  );
+  </div>
+);
 }
 
 export default App;
