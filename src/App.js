@@ -20,8 +20,9 @@ function App() {
 })
 return (
   <div className="App">
-
+    <div style={{width: 900, height:350,}}>
     <Total />
+    </div>
 
     <div style={{ width: 800 }}>
       <BarChart chartData={PropertyData} />
