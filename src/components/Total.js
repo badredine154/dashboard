@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import './Total.css';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -17,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const Total = () => {
     return (
         <Box sx={{ width: '100%' }}>
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+            <Grid container rowSpacing={2} columnSpacing={{ xs: 20, sm: 4, md: 7 }}>
                 <Grid item xs={6}>
                     <Item>
                         <Typography variant="h5" gutterBottom component="div">
