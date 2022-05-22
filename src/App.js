@@ -28,7 +28,7 @@ function App() {
     datasets: [{
       label: "properties sold",
       data: propertyData.map((data) => data.sales),
-      backgroundColor: "red",
+      backgroundColor: "rgba(191, 61, 61, 0.84)",
       borderColor:"black",
       borderWidth:"1",
   },
@@ -39,7 +39,7 @@ const [PropertyDataRent, setpropertyDataRent] = useState({
   datasets: [{
     label: "properties rented",
     data: propertyData.map((data) => data.rent),
-    backgroundColor: "blue",
+    backgroundColor: "rgba(57, 73, 177, 0.84)",
     borderColor:"black",
     borderWidth:"1",
 },
